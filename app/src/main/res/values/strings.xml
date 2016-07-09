@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">My Vegs</string>
+    <string name="addveg.message.veg.name">Nombre del cultivo</string>
+    <string name="addveg.message.title.info">Información</string>
+    <string name="addveg.message.title.necessities">Necesidades</string>
+    <string name="addveg.message.light">Luz</string>
+    <string name="addveg.message.water">Agua</string>
+    <string name="addveg.message.ground">Suelo</string>
+    <string name="addveg.button.insert.veg">Agregar</string>
+    <string name="addveg.message.germination.time">Días en germinar</string>
+    <string name="addveg.button.increase" translatable="false">+</string>
+    <string name="addveg.button.decrease" translatable="false">-</string>
+    <string name="main.menu.action.about">Acerca de</string>
+    <string name="addveg.button.clear">Limpiar</string>
+    <string name="addveg.message.detail.title.message">%1$s (Tiempo de germinación: %2$d días)</string>
+    <string name="info.fields.cleared">Se han limpiado los campos</string>
+    <string name="info.germination.time">El tiempo de germinación debe ser mayor que cero</string>
+    <string name="login.message.email">Correo electrónico</string>
+    <string name="login.message.password">Contraseña</string>
+    <string name="login.button.signin">Iniciar sesión</string>
+    <string name="login.button.signup">Crear cuenta</string>
+    <string name="login.message.welcome">Bienvenido a</string>
+    <string name="login_error_message_signin">No se ha podido iniciar sesión\n%s</string>
+    <string name="login_notice_message_signup">Usuario agregado correctamente</string>
+    <string name="login_error_message_signup">No se ha podido registrar el nuevo usuario\n%s</string>
+    <string name="veglist.menu.action.signoff">Cerrar sesión</string>
+    <string name="veglist.title">Cultivos de %1$s</string>
+    <string name="veglist.message.detail.message">%1$s (Días en germinar: %2$d)</string>
+    <string name="veglist.menu.action.about">Acerca de</string>
+    <string name="addveg.title">Añadir cultivo</string>
+    <string name="addveg.error.message.fields">Es necesario rellenar todos los campos</string>
+    <string name="addveg.error.message">Ocurrió un error</string>
+    <string name="addveg.error.addveg">El cultivo ya exite</string>
+    <string name="addveg.notice.message.veg.adding">Se está añadiendo el cultivo...</string>
+    <string name="addveg.notice.message.veg.added">El cultivo se ha agregado con éxito</string>
+    <string name="addveg.action.undo">Deshacer</string>
+    <string name="addveg.message.undo">Se han restablecido los campos</string>
+    <string name="dialog.button.cancel">Cancelar</string>
+    <string name="dialog.button.ok">Confirmar</string>
+    <string name="dialog.logout.title">¿Cerrar la sesión?</string>
+    <string name="dialog.logout.message">¿Deseas salir de la aplicación?</string>
+    <string name="dialog.delete.veg.title">Eliminar cultivo</string>
+    <string name="dialog.delete.veg.message">¿Realmente desea eliminar \"%1$s\"?</string>
+    <string name="vegdetail.title">Detalles de \"%1$s\"</string>
+    <string name="vegdetail.button.modify">Modificar</string>
+    <string name="veglistdetail.menu.action.modify">Modificar</string>
+    <string name="veglistdetail.germination.time">Tiempo de germinación: %1$d</string>
+
+    <string name="main_message_picture_source">Selecciona una foto</string>
+    <string name="main_error_dispatch_camera">Error al crear el archivo</string>
+
+    <string name="day">día</string>
+    <string name="days">días</string>
+
+    <string name="about.title">Acerca de</string>
+    <string name="about.message">Esta aplicación ha sido realizada por Rubén Díaz Sánchez para el curso \"Desarrollo de aplicaciones profesionales para Android\".\n\nDicho curso ha sido impartido por D. Adrián Catalán, de la Universidad Galileo (Guatemala).</string>
+    <string name="veglist.menu.action.sort.by.name">Ordenar por nombre</string>
+    <string name="veglist.menu.action.sort.by.germination">Ordenar por tiempo de germinación</string>
+
+</resources>

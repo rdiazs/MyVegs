@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dialog_margin"
+        android:layout_marginRight="@dimen/dialog_margin"
+        android:layout_marginTop="@dimen/dialog_margin"
+        android:background="@drawable/bg_dialog"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dialog_padding_bottom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dialog_title"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imageIcon"
+                android:layout_width="@dimen/veg_image_size_icon"
+                android:layout_height="@dimen/veg_image_size_icon"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_overlay="true"
+                app:civ_border_width="2dp"
+                app:civ_fill_color="@color/colorPrimary"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+
+            <!--<ImageView-->
+            <!--android:id="@+id/image"-->
+            <!--android:layout_width="48dp"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:src="@mipmap/ic_launcher"/>-->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageIcon"
+                android:layout_toEndOf="@+id/imageIcon"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/germinationTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:padding="@dimen/activity_vertical_margin"
+            android:text="Germination"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/image"
+                android:layout_width="@dimen/veg_image_size"
+                android:layout_height="@dimen/veg_image_size"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_overlay="true"
+                app:civ_border_width="2dp"
+                app:civ_fill_color="@color/colorPrimary"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:id="@+id/layoutNecessities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TableRow android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/layoutLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <include
+                                android:id="@+id/lightNecessity"
+                                layout="@layout/necessity_row"></include>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutWater"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <include
+                                android:id="@+id/waterNecessity"
+                                layout="@layout/necessity_row"></include>
+
+                        </RelativeLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/layoutGround"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <include
+                                android:id="@+id/groundNecessity"
+                                layout="@layout/necessity_row"></include>
+
+                        </RelativeLayout>
+                    </TableRow>
+
+                </TableLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bt_dialog_close"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:tint="@color/colorPrimaryDark"/>
+
+</RelativeLayout>

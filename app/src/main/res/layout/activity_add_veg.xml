@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/addveg.message.title.info"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <View
+            android:id="@+id/separator1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/txtInfo"
+            android:layout_alignStart="@+id/txtInfo"
+            android:layout_below="@id/txtInfo"
+            android:background="@color/colorDivider"
+            android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/ic_menu_camera"
+                app:civ_fill_color="@color/colorPrimary"
+                android:id="@+id/image"
+                android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/wrapperName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/image">
+
+                <EditText
+                    android:id="@+id/inputName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/addveg.message.veg.name"
+                    android:inputType="text|textCapSentences"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/germinationLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wrapperName"
+                android:layout_toRightOf="@+id/image">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/wrapperGerminationTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin">
+
+                    <EditText
+                        android:id="@+id/inputTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:ems="10"
+                        android:hint="@string/addveg.message.germination.time"
+                        android:inputType="number"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnIncrease"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_toEndOf="@+id/wrapperGerminationTime"
+                    android:layout_toRightOf="@+id/wrapperGerminationTime"
+                    android:text="@string/addveg.button.increase"/>
+
+                <Button
+                    android:id="@+id/btnDecrease"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/btnIncrease"
+                    android:layout_toEndOf="@+id/btnIncrease"
+                    android:layout_toRightOf="@+id/btnIncrease"
+                    android:text="@string/addveg.button.decrease"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearNecessities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearInfo"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtNecessities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/addveg.message.title.necessities"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/txtNecessities"
+            android:layout_alignStart="@+id/txtNecessities"
+            android:layout_below="@id/txtNecessities"
+            android:background="@color/colorDivider"/>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableNecessities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearNecessities"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/txtLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/linearNecessities"
+                android:layout_alignRight="@+id/linearNecessities"
+                android:layout_below="@+id/linearNecessities"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/addveg.message.light"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <RatingBar
+                android:id="@+id/ratingLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/txtWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/linearWater"
+                android:layout_alignRight="@+id/linearWater"
+                android:layout_below="@+id/linearWater"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/addveg.message.water"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <RatingBar
+                android:id="@+id/ratingWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/txtGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/linearGround"
+                android:layout_alignRight="@+id/linearGround"
+                android:layout_below="@+id/linearGround"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/addveg.message.ground"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <RatingBar
+                android:id="@+id/ratingGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linearButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/tableNecessities"
+        android:gravity="center_horizontal|center_vertical">
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/addveg.button.clear"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btnClear"
+            android:text="@string/addveg.button.insert.veg"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/ic_exit_to_app"
+        android:orderInCategory="150"
+        android:title="@string/veglist.menu.action.signoff"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="120"
+        android:title="@string/veglist.menu.action.about"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_sort_by_germination"
+        android:orderInCategory="80"
+        android:icon="@drawable/ic_sort_numeric_white_48dp"
+        android:title="@string/veglist.menu.action.sort.by.germination"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_sort_by_name"
+        android:orderInCategory="60"
+        android:icon="@drawable/ic_sort_alphabetical_white_48dp"
+        android:title="@string/veglist.menu.action.sort.by.name"
+        app:showAsAction="ifRoom"/>
+</menu>
